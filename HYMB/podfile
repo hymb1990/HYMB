@@ -1,0 +1,34 @@
+platform :ios, ‘8.0’
+use_frameworks!
+
+target ‘HYMB’ do
+
+pod 'AFNetworking', '~> 3.1.0'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'MBProgressHUD'
+pod 'SDWebImage'
+pod 'FMDB'
+pod 'IQKeyboardManager'
+pod 'Masonry', '~> 1.0.2'
+pod 'SDAutoLayout', '~> 2.1.0’
+pod 'SDWebImage/GIF'
+pod 'FDFullscreenPopGesture'
+pod 'ZXingObjC', '~> 3.0'
+pod 'ZYCornerRadius', git:'https://github.com/liuzhiyi1992/ZYCornerRadius.git',tag:'0.9.1'
+pod 'SDCycleScrollView','~> 1.75'
+pod 'TYCyclePagerView'
+pod 'lottie-ios'
+pod 'FLEX', '~> 2.0', :configurations => ['Debug']
+pod 'Shimmer'
+pod 'YYText', '~> 1.0.7’
+pod 'FSCalendar'
+pod 'NJKWebViewProgress'
+pod 'YBImageBrowser'
+pod 'BRPickerView'
+
+pod 'ReactiveObjC'
+pod 'LLSegmentBar'
+
+
+end
