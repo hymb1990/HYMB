@@ -55,12 +55,12 @@
     self.dataArr = @[
                      @{@"title":@"其它",
                        @"content":@[
+                                    @"Swift",
                                     @"https配置",
                                     @"YYText",
                                     @"FSCalendar",
                                     @"webView",
                                     @"OCJS",
-                                    @"Swift",
                                     ]},
                      
                      @{@"title":@"常用控件",
