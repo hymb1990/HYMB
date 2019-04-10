@@ -10,11 +10,24 @@ import UIKit
 
 class SwiftViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var tableView:UITableView! //tabelView
+//    var tableView:UITableView! //tabelView
+    var tableView = UITableView()
+    var dataArr = NSArray()
+    
     static let cellId = "cell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dataArr = [
+            [
+            "title":"其它",
+            "content":["数据持久化", "动画"],
+            ],
+        ]
+        
+        print(dataArr)
+        
         
         self.setUI()
     }
@@ -25,7 +38,7 @@ class SwiftViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //        self.view.backgroundColor = UIColor.red
         
         // 添加tableView
-        tableView = UITableView(frame: self.view.bounds, style: UITableView.Style.grouped)
+        tableView = UITableView(frame: self.view.bounds, style: UITableView.Style.plain)
         tableView.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: SwiftViewController.cellId)
         tableView.delegate = self
@@ -35,11 +48,11 @@ class SwiftViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return dataArr.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return ((dataArr[section] as AnyObject)["content"] as AnyObject).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,7 +61,7 @@ class SwiftViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: SwiftViewController.cellId, for: indexPath)
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         
-        cell.textLabel?.text = "跳转到OC界面"
+        cell.textLabel?.text = ((dataArr[indexPath.section] as AnyObject)["content"] as! NSArray)[indexPath.row] as? String
         
         return cell
     }
@@ -62,17 +75,18 @@ class SwiftViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 30
+        return CGFloat.leastNormalMagnitude
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let view = UIView()
+        view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
         
         let label = UILabel()
         label.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 30)
-        label.text = "header"
-        label.backgroundColor = UIColor.orange
+        label.text = (dataArr[section] as AnyObject)["title"] as? String
+        label.textAlignment = NSTextAlignment.center
         view .addSubview(label)
         
         return view;
@@ -81,13 +95,8 @@ class SwiftViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
         let view = UIView()
-        
-        let label = UILabel()
-        label.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 30)
-        label.text = "footer"
-        label.backgroundColor = UIColor.brown
-        view .addSubview(label)
-        
+        view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
+
         return view;
     }
 

@@ -375,7 +375,7 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-         NSString *headerIdentifier = [NSString stringWithFormat:@"headerId%ld%ld",indexPath.section,indexPath.row];
+        NSString *headerIdentifier = [NSString stringWithFormat:@"header%ld%ld",(long)indexPath.section,(long)indexPath.row];
         [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerIdentifier];
         UICollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerIdentifier forIndexPath:indexPath];
         view.backgroundColor = DefaultColor;
@@ -390,7 +390,7 @@
 
         return view;
     }else{
-        NSString *footerIdentifier = [NSString stringWithFormat:@"footerId%ld%ld",indexPath.section,indexPath.row];
+        NSString *footerIdentifier = [NSString stringWithFormat:@"footer%ld%ld",(long)indexPath.section,(long)indexPath.row];
          [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerIdentifier];
         UICollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerIdentifier forIndexPath:indexPath];
         view.backgroundColor = [UIColor grayColor];

@@ -1770,10 +1770,10 @@
 		4FE7939C21421E020070427C /* FirstPage */ = {
 			isa = PBXGroup;
 			children = (
-				0476226E2255E168008F9C52 /* Swift */,
 				4189252221F02587007D00B2 /* FirstPageVC.h */,
 				4189252121F02587007D00B2 /* FirstPageVC.m */,
 				4189252321F02587007D00B2 /* View */,
+				0476226E2255E168008F9C52 /* Swift */,
 				4156C51121F8156A00C6E7F3 /* 加密解密 */,
 				4178DF7521F6B2D300B1BAAD /* 数据持久化 */,
 				4F4C0DDD2147883F00C6B1AF /* Pay */,
@@ -2096,6 +2096,7 @@
 				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
 				"${BUILT_PRODUCTS_DIR}/ZXingObjC/ZXingObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/ZYCornerRadius/ZYCornerRadius.framework",
+				"${BUILT_PRODUCTS_DIR}/cocopodsDemo/cocopodsDemo.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -2125,6 +2126,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZXingObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZYCornerRadius.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cocopodsDemo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
