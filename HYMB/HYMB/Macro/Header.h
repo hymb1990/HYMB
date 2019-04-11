@@ -34,6 +34,18 @@
 #define BtnGrayColor        ColorWithRGB(178, 215, 238)
 
 /* 定义数值-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+//全屏高度
+#define kSCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
+//全屏宽度
+#define kSCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
+
+#define kSPACE 10
+
+//滚动视图的宽
+#define KSCOLLVIEW_WIDTH CGRectGetWidth([UIScreen mainScreen].bounds)
+//滚动视图的高
+#define KSCOLLVIEW_HEIGHT CGRectGetHeight([UIScreen mainScreen].bounds)
+
 //屏幕宽高
 #define kScreen_Width   [UIScreen mainScreen].bounds.size.width
 #define kScreen_Height  [UIScreen mainScreen].bounds.size.height

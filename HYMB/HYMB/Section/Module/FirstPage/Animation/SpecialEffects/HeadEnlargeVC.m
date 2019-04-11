@@ -1,20 +1,21 @@
 //
-//  TableViewController.m
-//  TracePlatform
+//  HeadEnlargeVC.m
+//  HYMB
 //
-//  Created by lym on 2017/5/2.
-//  Copyright © 2017年 ehsureTec. All rights reserved.
+//  Created by 863Soft on 2019/4/10.
+//  Copyright © 2019 hymb. All rights reserved.
 //
 
-#import "TableViewController.h"
+#import "HeadEnlargeVC.h"
 
-@interface TableViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface HeadEnlargeVC ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, retain) UIImageView *zoomImageView;
 
 @end
 
-@implementation TableViewController
+@implementation HeadEnlargeVC
 
 #pragma mark - 生命周期
 - (void)viewDidLoad {
@@ -34,16 +35,42 @@
 #pragma mark - 构建视图
 - (void)setUI {
     
-    self.title = @"";
+    self.title = @"头部视图变大";
     self.view.backgroundColor = [UIColor whiteColor];
     
     //添加tableView
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height-NaviH) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
     self.tableView.backgroundColor = DefaultColor;
     [self.view addSubview:self.tableView];
+    
+
+    //添加headerV
+    UIView *headerV = [UIView new];
+    headerV.frame = CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_WIDTH/622*438);
+    
+    self.zoomImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"magiGifts"]];
+    self.zoomImageView.frame = CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_WIDTH/622*438);
+    //contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
+    self.zoomImageView.contentMode = UIViewContentModeScaleAspectFill;
+    [headerV addSubview:self.zoomImageView];
+    
+    self.tableView.tableHeaderView = headerV;
+    
+}
+
+#pragma mark - 下拉图片放大
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    CGFloat y = scrollView.contentOffset.y;
+    if (y < 0) {
+        CGRect frame = self.zoomImageView.frame;
+        frame.origin.y = y;
+        frame.size.height = -y+kSCREEN_WIDTH/622*438;
+        self.zoomImageView.frame = frame;
+    }
     
 }
 
@@ -134,6 +161,9 @@
     MYLog(@"%@", indexPath);
 }
 
+
+
 @end
+
 
 

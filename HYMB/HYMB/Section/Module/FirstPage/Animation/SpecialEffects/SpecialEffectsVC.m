@@ -1,24 +1,29 @@
 //
-//  TableViewController.m
-//  TracePlatform
+//  SpecialEffectsVC.m
+//  HYMB
 //
-//  Created by lym on 2017/5/2.
-//  Copyright © 2017年 ehsureTec. All rights reserved.
+//  Created by 863Soft on 2019/4/10.
+//  Copyright © 2019 hymb. All rights reserved.
 //
 
-#import "TableViewController.h"
+#import "SpecialEffectsVC.h"
+#import "HeadEnlargeVC.h"
+#import "HoverViewController.h"
 
-@interface TableViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface SpecialEffectsVC ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, copy) NSArray *dataArr;
 
 @end
 
-@implementation TableViewController
+@implementation SpecialEffectsVC
 
 #pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.dataArr = @[@"下拉头部放大", @"上滑控件悬停"];
     
     [self setUI];
 }
@@ -34,7 +39,7 @@
 #pragma mark - 构建视图
 - (void)setUI {
     
-    self.title = @"";
+    self.title = @"特效";
     self.view.backgroundColor = [UIColor whiteColor];
     
     //添加tableView
@@ -52,7 +57,7 @@
  * tableView的分区数
  */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 10;
+    return self.dataArr.count;
 }
 
 
@@ -60,18 +65,8 @@
  * tableView分区里的行数
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    switch (section) {
-        case 0:
-            return 1;
-            break;
-        case 1:
-            return 2;
-            break;
-            
-        default:
-            return 1;
-            break;
-    }
+    
+     return 1;
 }
 
 /**
@@ -84,6 +79,8 @@
     //修改cell属性，使其在选中时无色
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    cell.textLabel.text = self.dataArr[indexPath.section];
+    
     return cell;
 }
 
@@ -91,7 +88,7 @@
  * tableViewCell的高度
  */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+    return 60;
 }
 
 /**
@@ -132,8 +129,22 @@
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     MYLog(@"%@", indexPath);
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if ([cell.textLabel.text isEqualToString:@"下拉头部放大"]) {
+        HeadEnlargeVC *VC = [HeadEnlargeVC new];
+        [self.navigationController pushViewController:VC animated:YES];
+    }
+    
+    if ([cell.textLabel.text isEqualToString:@"上滑控件悬停"]) {
+        
+        HoverViewController *VC = [HoverViewController new];
+        [self.navigationController pushViewController:VC animated:YES];
+    }
 }
 
 @end
+
 
 

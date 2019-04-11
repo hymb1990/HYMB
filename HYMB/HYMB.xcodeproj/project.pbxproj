@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04103D72225DF5E90071C019 /* SpecialEffectsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04103D70225DF5E90071C019 /* SpecialEffectsVC.m */; };
+		04103D73225DF5E90071C019 /* SpecialEffectsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04103D71225DF5E90071C019 /* SpecialEffectsVC.xib */; };
+		04103D77225DF8B40071C019 /* HeadEnlargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04103D75225DF8B40071C019 /* HeadEnlargeVC.m */; };
+		04103D78225DF8B40071C019 /* HeadEnlargeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04103D76225DF8B40071C019 /* HeadEnlargeVC.xib */; };
+		04103D7A225DFAD30071C019 /* magiGifts.png in Resources */ = {isa = PBXBuildFile; fileRef = 04103D79225DFAD30071C019 /* magiGifts.png */; };
+		04103D7E225ED1E10071C019 /* HoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04103D7C225ED1E10071C019 /* HoverViewController.m */; };
+		04103D7F225ED1E10071C019 /* HoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04103D7D225ED1E10071C019 /* HoverViewController.xib */; };
 		047622722255E18D008F9C52 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047622702255E18D008F9C52 /* SwiftViewController.swift */; };
 		047622732255E18D008F9C52 /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047622712255E18D008F9C52 /* SwiftViewController.xib */; };
 		04A3B1A1224888AC00619D15 /* PropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3B19F224888AC00619D15 /* PropertyViewController.m */; };
@@ -258,6 +265,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04103D6F225DF5E90071C019 /* SpecialEffectsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialEffectsVC.h; sourceTree = "<group>"; };
+		04103D70225DF5E90071C019 /* SpecialEffectsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialEffectsVC.m; sourceTree = "<group>"; };
+		04103D71225DF5E90071C019 /* SpecialEffectsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecialEffectsVC.xib; sourceTree = "<group>"; };
+		04103D74225DF8B40071C019 /* HeadEnlargeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadEnlargeVC.h; sourceTree = "<group>"; };
+		04103D75225DF8B40071C019 /* HeadEnlargeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadEnlargeVC.m; sourceTree = "<group>"; };
+		04103D76225DF8B40071C019 /* HeadEnlargeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadEnlargeVC.xib; sourceTree = "<group>"; };
+		04103D79225DFAD30071C019 /* magiGifts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magiGifts.png; sourceTree = "<group>"; };
+		04103D7B225ED1E10071C019 /* HoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HoverViewController.h; sourceTree = "<group>"; };
+		04103D7C225ED1E10071C019 /* HoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HoverViewController.m; sourceTree = "<group>"; };
+		04103D7D225ED1E10071C019 /* HoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoverViewController.xib; sourceTree = "<group>"; };
 		0476226F2255E18D008F9C52 /* HYMB-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HYMB-Bridging-Header.h"; sourceTree = "<group>"; };
 		047622702255E18D008F9C52 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		047622712255E18D008F9C52 /* SwiftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftViewController.xib; sourceTree = "<group>"; };
@@ -677,6 +694,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04103D6E225DF5B40071C019 /* SpecialEffects */ = {
+			isa = PBXGroup;
+			children = (
+				04103D6F225DF5E90071C019 /* SpecialEffectsVC.h */,
+				04103D70225DF5E90071C019 /* SpecialEffectsVC.m */,
+				04103D71225DF5E90071C019 /* SpecialEffectsVC.xib */,
+				04103D74225DF8B40071C019 /* HeadEnlargeVC.h */,
+				04103D75225DF8B40071C019 /* HeadEnlargeVC.m */,
+				04103D76225DF8B40071C019 /* HeadEnlargeVC.xib */,
+				04103D7B225ED1E10071C019 /* HoverViewController.h */,
+				04103D7C225ED1E10071C019 /* HoverViewController.m */,
+				04103D7D225ED1E10071C019 /* HoverViewController.xib */,
+			);
+			path = SpecialEffects;
+			sourceTree = "<group>";
+		};
 		0476226E2255E168008F9C52 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
@@ -1010,6 +1043,7 @@
 		4F4C0CCF214635A600C6B1AF /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				04103D6E225DF5B40071C019 /* SpecialEffects */,
 				4F63F8C1215B796B00432B2B /* Shimmer */,
 				4F63F8B3215B540300432B2B /* Lottie */,
 				4F4C0CD02146364B00C6B1AF /* LoadingAnimationVC.h */,
@@ -1382,6 +1416,7 @@
 		4F4C0DBA21475D6600C6B1AF /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				04103D79225DFAD30071C019 /* magiGifts.png */,
 				4F63F8C5215B7E5B00432B2B /* 今日头条.png */,
 				4F4C0DBE21475D7400C6B1AF /* 005.jpg */,
 				4F4C0DBD21475D7400C6B1AF /* h1.jpg */,
@@ -2002,8 +2037,11 @@
 				4198A346222E2A3500D8AE18 /* LLSegmentBarViewController.xib in Resources */,
 				4F06E466219424BD007A7BE6 /* first.js in Resources */,
 				4F4C0D322146456500C6B1AF /* LTPickerView.xib in Resources */,
+				04103D7F225ED1E10071C019 /* HoverViewController.xib in Resources */,
 				4F63F8AA215B504B00432B2B /* R.json in Resources */,
 				4F4C0E472147AE2A00C6B1AF /* GZYPT_Test.p12 in Resources */,
+				04103D7A225DFAD30071C019 /* magiGifts.png in Resources */,
+				04103D73225DF5E90071C019 /* SpecialEffectsVC.xib in Resources */,
 				4F4C0DCE21475D7400C6B1AF /* h4.jpg in Resources */,
 				4F63F8AB215B504B00432B2B /* S.json in Resources */,
 				4F63F8AC215B504B00432B2B /* T.json in Resources */,
@@ -2032,6 +2070,7 @@
 				4F4C0DC921475D7400C6B1AF /* h3.jpg in Resources */,
 				4F63F8A2215B504B00432B2B /* J.json in Resources */,
 				4F63F897215B504B00432B2B /* B.json in Resources */,
+				04103D78225DF8B40071C019 /* HeadEnlargeVC.xib in Resources */,
 				4F4C0D422146456500C6B1AF /* PYSearch.bundle in Resources */,
 				41AFBEF122294DFC00C0530E /* MyAlertView.xib in Resources */,
 				4F63F8A1215B504B00432B2B /* I.json in Resources */,
@@ -2240,8 +2279,10 @@
 				4FE793DF21427CA30070427C /* RefreshCell.m in Sources */,
 				4F4C0D392146456500C6B1AF /* LBXScanView.m in Sources */,
 				4156C53221F833F800C6E7F3 /* MD5ViewController.m in Sources */,
+				04103D77225DF8B40071C019 /* HeadEnlargeVC.m in Sources */,
 				4F4C0D432146456500C6B1AF /* PYSearchConst.m in Sources */,
 				4FE7935B214219980070427C /* main.m in Sources */,
+				04103D72225DF5E90071C019 /* SpecialEffectsVC.m in Sources */,
 				4F4C0D4A2146456500C6B1AF /* MyQRViewController.m in Sources */,
 				41AFBEE7222904A300C0530E /* MyAlertView.m in Sources */,
 				4F4C0D462146456500C6B1AF /* UIColor+PYSearchExtension.m in Sources */,
@@ -2260,6 +2301,7 @@
 				4F63F8C0215B713500432B2B /* UIWindow+TTFLEXSetting.m in Sources */,
 				4F4C0D342146456500C6B1AF /* LBXScanLineAnimation.m in Sources */,
 				4178DF7921F6B3EC00B1BAAD /* propertyListVC.m in Sources */,
+				04103D7E225ED1E10071C019 /* HoverViewController.m in Sources */,
 				4F4C0DA421466DBF00C6B1AF /* MHDatePicker.m in Sources */,
 				4F4C0D552146456500C6B1AF /* UIAlertView+LBXAlertAction.m in Sources */,
 				4F4C0D3C2146456500C6B1AF /* LBXScanWrapper.m in Sources */,

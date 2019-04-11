@@ -36,6 +36,7 @@
 #import "DESViewController.h"
 #import "MD5ViewController.h"
 #import "RSAViewController.h"
+#import "SpecialEffectsVC.h"
 
 @interface FirstPageVC ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -94,7 +95,8 @@
                      @{@"title":@"动画",
                        @"content":@[@"加载动画",
                                     @"lottie-ios",
-                                    @"Shimmer",]},
+                                    @"Shimmer",
+                                    @"特效",]},
                      
                      
                      
@@ -365,6 +367,10 @@
         [self.navigationController pushViewController:VC animated:YES];
     }
     
+    if ([cell.titleL.text isEqualToString:@"特效"]) {
+        SpecialEffectsVC *VC = [SpecialEffectsVC new];
+        [self.navigationController pushViewController:VC animated:YES];
+    }
     
 
 }
