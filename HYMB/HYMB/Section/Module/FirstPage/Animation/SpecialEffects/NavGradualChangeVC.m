@@ -1,21 +1,21 @@
 //
-//  HeadEnlargeVC.m
+//  NavGradualChangeVC.m
 //  HYMB
 //
-//  Created by 863Soft on 2019/4/10.
+//  Created by 863Soft on 2019/4/11.
 //  Copyright © 2019 hymb. All rights reserved.
 //
 
-#import "HeadEnlargeVC.h"
+#import "NavGradualChangeVC.h"
 
-@interface HeadEnlargeVC ()<UITableViewDataSource, UITableViewDelegate>
+@interface NavGradualChangeVC ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, retain) UIImageView *zoomImageView;
 
 @end
 
-@implementation HeadEnlargeVC
+@implementation NavGradualChangeVC
 
 #pragma mark - 生命周期
 - (void)viewDidLoad {
@@ -32,21 +32,32 @@
     [super viewWillDisappear:YES];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    //设置透明导航栏
+    self.navigationController.navigationBar.subviews.firstObject.alpha = 0.0;
+}
+
 #pragma mark - 构建视图
 - (void)setUI {
     
-    self.title = @"头部视图变大";
+    self.title = @"导航条渐变";
     self.view.backgroundColor = [UIColor whiteColor];
     
+    //设置透明导航栏
+    UIView *barImageView = self.navigationController.navigationBar.subviews.firstObject;
+    barImageView.alpha = 0.0;
+    
     //添加tableView
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height-NaviH) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, -NaviH, kScreen_Width, kScreen_Height) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
     self.tableView.backgroundColor = DefaultColor;
     [self.view addSubview:self.tableView];
     
-
+    
     //添加headerV
     UIView *headerV = [UIView new];
     headerV.frame = CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_WIDTH/622*438);
@@ -148,9 +159,10 @@
     MYLog(@"%@", indexPath);
 }
 
-#pragma mark - 下拉图片放大
+#pragma mark - 下拉图片放大、导航条渐变
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
+    //下拉图片放大
     CGFloat y = scrollView.contentOffset.y;
     if (y < 0) {
         CGRect frame = self.zoomImageView.frame;
@@ -159,9 +171,34 @@
         self.zoomImageView.frame = frame;
     }
     
+
+    //导航条渐变
+    CGFloat minAlphaOffset = 0;
+    CGFloat maxAlphaOffset = kSCREEN_WIDTH/622*438-NaviH;
+    CGFloat offset = scrollView.contentOffset.y;
+    CGFloat alpha = (offset - minAlphaOffset) / (maxAlphaOffset - minAlphaOffset);
+    //    barImageView = self.navigationController.navigationBar.subviews.firstObject；
+    //    MYLog(@"%f", offset);
+    //    MYLog(@"%f", alpha);
+    self.navigationController.navigationBar.subviews.firstObject.alpha = alpha;
+    
 }
 
+//#pragma mark - 导航条渐变
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    CGFloat minAlphaOffset = - 64;
+//    CGFloat maxAlphaOffset = 200;
+//    CGFloat offset = scrollView.contentOffset.y;
+//    CGFloat alpha = (offset - minAlphaOffset) / (maxAlphaOffset - minAlphaOffset);
+//    //    barImageView = self.navigationController.navigationBar.subviews.firstObject；
+//    self.navigationController.navigationBar.subviews.firstObject.alpha = alpha;
+//}
+
 @end
+
+
+
+
 
 
 

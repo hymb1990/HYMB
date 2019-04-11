@@ -87,10 +87,9 @@
 #import "YBPopupMenu.h"
 #import "UIView+Extension.h"
 #import "SSLManager.h"
-
+#import "YNPageViewController.h"
 #import <Lottie/Lottie.h>
 //#import <ZFPlayer/ZFPlayer.h>
-
 #import "ZFPlayer.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "FMDB.h"

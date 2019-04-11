@@ -1,5 +1,5 @@
 //
-//  HoverViewController.h
+//  NavGradualChangeVC.h
 //  HYMB
 //
 //  Created by 863Soft on 2019/4/11.
@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HoverViewController : YNPageViewController
-
-+ (instancetype)suspendTopPausePageVC;
+@interface NavGradualChangeVC : UIViewController
 
 @end
 

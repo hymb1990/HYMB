@@ -14,6 +14,9 @@
 		04103D7A225DFAD30071C019 /* magiGifts.png in Resources */ = {isa = PBXBuildFile; fileRef = 04103D79225DFAD30071C019 /* magiGifts.png */; };
 		04103D7E225ED1E10071C019 /* HoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04103D7C225ED1E10071C019 /* HoverViewController.m */; };
 		04103D7F225ED1E10071C019 /* HoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04103D7D225ED1E10071C019 /* HoverViewController.xib */; };
+		04103D82225F0DF60071C019 /* YNSuspendTopPauseBaseTableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04103D80225F0DF50071C019 /* YNSuspendTopPauseBaseTableViewVC.m */; };
+		04103D86225F16180071C019 /* NavGradualChangeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04103D84225F16170071C019 /* NavGradualChangeVC.m */; };
+		04103D87225F16180071C019 /* NavGradualChangeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04103D85225F16170071C019 /* NavGradualChangeVC.xib */; };
 		047622722255E18D008F9C52 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047622702255E18D008F9C52 /* SwiftViewController.swift */; };
 		047622732255E18D008F9C52 /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047622712255E18D008F9C52 /* SwiftViewController.xib */; };
 		04A3B1A1224888AC00619D15 /* PropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3B19F224888AC00619D15 /* PropertyViewController.m */; };
@@ -275,6 +278,11 @@
 		04103D7B225ED1E10071C019 /* HoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HoverViewController.h; sourceTree = "<group>"; };
 		04103D7C225ED1E10071C019 /* HoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HoverViewController.m; sourceTree = "<group>"; };
 		04103D7D225ED1E10071C019 /* HoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoverViewController.xib; sourceTree = "<group>"; };
+		04103D80225F0DF50071C019 /* YNSuspendTopPauseBaseTableViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YNSuspendTopPauseBaseTableViewVC.m; sourceTree = "<group>"; };
+		04103D81225F0DF60071C019 /* YNSuspendTopPauseBaseTableViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YNSuspendTopPauseBaseTableViewVC.h; sourceTree = "<group>"; };
+		04103D83225F16170071C019 /* NavGradualChangeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavGradualChangeVC.h; sourceTree = "<group>"; };
+		04103D84225F16170071C019 /* NavGradualChangeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavGradualChangeVC.m; sourceTree = "<group>"; };
+		04103D85225F16170071C019 /* NavGradualChangeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavGradualChangeVC.xib; sourceTree = "<group>"; };
 		0476226F2255E18D008F9C52 /* HYMB-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HYMB-Bridging-Header.h"; sourceTree = "<group>"; };
 		047622702255E18D008F9C52 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		047622712255E18D008F9C52 /* SwiftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftViewController.xib; sourceTree = "<group>"; };
@@ -703,6 +711,11 @@
 				04103D74225DF8B40071C019 /* HeadEnlargeVC.h */,
 				04103D75225DF8B40071C019 /* HeadEnlargeVC.m */,
 				04103D76225DF8B40071C019 /* HeadEnlargeVC.xib */,
+				04103D83225F16170071C019 /* NavGradualChangeVC.h */,
+				04103D84225F16170071C019 /* NavGradualChangeVC.m */,
+				04103D85225F16170071C019 /* NavGradualChangeVC.xib */,
+				04103D81225F0DF60071C019 /* YNSuspendTopPauseBaseTableViewVC.h */,
+				04103D80225F0DF50071C019 /* YNSuspendTopPauseBaseTableViewVC.m */,
 				04103D7B225ED1E10071C019 /* HoverViewController.h */,
 				04103D7C225ED1E10071C019 /* HoverViewController.m */,
 				04103D7D225ED1E10071C019 /* HoverViewController.xib */,
@@ -2007,6 +2020,7 @@
 				047622732255E18D008F9C52 /* SwiftViewController.xib in Resources */,
 				4F63F8B1215B504B00432B2B /* Y.json in Resources */,
 				4F63F8B2215B504B00432B2B /* Z.json in Resources */,
+				04103D87225F16180071C019 /* NavGradualChangeVC.xib in Resources */,
 				4178DFE521F706F300B1BAAD /* CoreDataViewController.xib in Resources */,
 				04A3B1A2224888AC00619D15 /* PropertyViewController.xib in Resources */,
 				4F63F89D215B504B00432B2B /* E.json in Resources */,
@@ -2131,6 +2145,7 @@
 				"${BUILT_PRODUCTS_DIR}/Shimmer/Shimmer.framework",
 				"${BUILT_PRODUCTS_DIR}/TYCyclePagerView/TYCyclePagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/YBImageBrowser/YBImageBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/YNPageViewController/YNPageViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
 				"${BUILT_PRODUCTS_DIR}/ZXingObjC/ZXingObjC.framework",
@@ -2161,6 +2176,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shimmer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TYCyclePagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YBImageBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YNPageViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZXingObjC.framework",
@@ -2325,7 +2341,9 @@
 				4F4C0CBE2145FEA900C6B1AF /* AnimationRefreshVC.m in Sources */,
 				4143F4E421F1CD2100062707 /* UIImageView+ZFCache.m in Sources */,
 				4F4C0D442146456500C6B1AF /* PYSearchSuggestionViewController.m in Sources */,
+				04103D86225F16180071C019 /* NavGradualChangeVC.m in Sources */,
 				4F63F8C4215B798D00432B2B /* ShimmerVC.m in Sources */,
+				04103D82225F0DF60071C019 /* YNSuspendTopPauseBaseTableViewVC.m in Sources */,
 				4F4C0D512146456500C6B1AF /* NSObject+YYModel.m in Sources */,
 				4198A345222E2A3500D8AE18 /* LLSegmentBarViewController.m in Sources */,
 				4F4C0D352146456500C6B1AF /* LBXScanNative.m in Sources */,

@@ -26,9 +26,9 @@ pod 'FSCalendar'
 pod 'NJKWebViewProgress'
 pod 'YBImageBrowser'
 pod 'BRPickerView'
-
 pod 'ReactiveObjC'
 pod 'LLSegmentBar'
+pod 'YNPageViewController'
 
 pod 'cocopodsDemo'
 

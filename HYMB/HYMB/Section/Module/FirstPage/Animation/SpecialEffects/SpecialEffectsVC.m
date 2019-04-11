@@ -8,6 +8,7 @@
 
 #import "SpecialEffectsVC.h"
 #import "HeadEnlargeVC.h"
+#import "NavGradualChangeVC.h"
 #import "HoverViewController.h"
 
 @interface SpecialEffectsVC ()<UITableViewDataSource, UITableViewDelegate>
@@ -23,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataArr = @[@"下拉头部放大", @"上滑控件悬停"];
+    self.dataArr = @[@"下拉头部放大", @"导航条渐变", @"上滑控件悬停"];
     
     [self setUI];
 }
@@ -137,9 +138,14 @@
         [self.navigationController pushViewController:VC animated:YES];
     }
     
+    if ([cell.textLabel.text isEqualToString:@"导航条渐变"]) {
+        NavGradualChangeVC *VC = [NavGradualChangeVC new];
+        [self.navigationController pushViewController:VC animated:YES];
+    }
+    
     if ([cell.textLabel.text isEqualToString:@"上滑控件悬停"]) {
-        
-        HoverViewController *VC = [HoverViewController new];
+//        HoverViewController *VC = [HoverViewController new];
+        UIViewController *VC = [HoverViewController suspendTopPausePageVC];
         [self.navigationController pushViewController:VC animated:YES];
     }
 }
