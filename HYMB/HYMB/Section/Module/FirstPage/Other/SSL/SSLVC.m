@@ -9,6 +9,7 @@
 #import "SSLVC.h"
 
 @interface SSLVC ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UIImageView *headerImage;
 
 @end

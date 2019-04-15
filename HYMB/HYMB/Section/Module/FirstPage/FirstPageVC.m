@@ -37,6 +37,7 @@
 #import "MD5ViewController.h"
 #import "RSAViewController.h"
 #import "SpecialEffectsVC.h"
+#import "FingerprintIdentificationVC.h"
 
 @interface FirstPageVC ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -62,6 +63,7 @@
                                     @"FSCalendar",
                                     @"webView",
                                     @"OCJS",
+                                    @"指纹识别",
                                     ]},
                      
                      @{@"title":@"常用控件",
@@ -371,6 +373,12 @@
         SpecialEffectsVC *VC = [SpecialEffectsVC new];
         [self.navigationController pushViewController:VC animated:YES];
     }
+    
+    if ([cell.titleL.text isEqualToString:@"指纹识别"]) {
+        FingerprintIdentificationVC *VC = [FingerprintIdentificationVC new];
+        [self.navigationController pushViewController:VC animated:YES];
+    }
+    
     
 
 }
