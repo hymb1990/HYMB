@@ -22,7 +22,7 @@ class SwiftViewController: UIViewController, UITableViewDelegate, UITableViewDat
         dataArr = [
             [
             "title":"其它",
-            "content":["数据持久化", "动画"],
+            "content":["跳转到OC界面", "测试"],
             ],
         ]
         
@@ -105,8 +105,13 @@ class SwiftViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //cell的点击事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let VC = AnimationRefreshVC()
-        self.navigationController?.pushViewController(VC, animated: true)
+        let cell:UITableViewCell = tableView.cellForRow(at: indexPath)!;
+        
+        if cell.textLabel?.text == "跳转到OC界面" {
+            let VC = AnimationRefreshVC()
+            self.navigationController?.pushViewController(VC, animated: true)
+        }
+        
     }
 
     

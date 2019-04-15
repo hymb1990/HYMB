@@ -23,10 +23,6 @@
     [self setUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
 }

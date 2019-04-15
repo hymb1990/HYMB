@@ -815,7 +815,7 @@
 			path = WMPageController;
 			sourceTree = "<group>";
 		};
-		4156C51121F8156A00C6E7F3 /* 加密解密 */ = {
+		4156C51121F8156A00C6E7F3 /* Encryption(加密解密) */ = {
 			isa = PBXGroup;
 			children = (
 				4156C53721F834FC00C6E7F3 /* RSA */,
@@ -823,7 +823,7 @@
 				4156C52121F81C5B00C6E7F3 /* DES */,
 				4156C51221F8158F00C6E7F3 /* AES */,
 			);
-			path = "加密解密";
+			path = "Encryption(加密解密)";
 			sourceTree = "<group>";
 		};
 		4156C51221F8158F00C6E7F3 /* AES */ = {
@@ -883,7 +883,7 @@
 			path = RSA;
 			sourceTree = "<group>";
 		};
-		4178DF7521F6B2D300B1BAAD /* 数据持久化 */ = {
+		4178DF7521F6B2D300B1BAAD /* DataPersistence(数据持久化) */ = {
 			isa = PBXGroup;
 			children = (
 				4178DFE021F706D800B1BAAD /* CoreData */,
@@ -892,7 +892,7 @@
 				4178DF7A21F6C3D800B1BAAD /* Preference(偏好设置) */,
 				4178DF7621F6B2EE00B1BAAD /* propertyList(属性列表) */,
 			);
-			path = "数据持久化";
+			path = "DataPersistence(数据持久化)";
 			sourceTree = "<group>";
 		};
 		4178DF7621F6B2EE00B1BAAD /* propertyList(属性列表) */ = {
@@ -1822,8 +1822,8 @@
 				4189252121F02587007D00B2 /* FirstPageVC.m */,
 				4189252321F02587007D00B2 /* View */,
 				0476226E2255E168008F9C52 /* Swift */,
-				4156C51121F8156A00C6E7F3 /* 加密解密 */,
-				4178DF7521F6B2D300B1BAAD /* 数据持久化 */,
+				4156C51121F8156A00C6E7F3 /* Encryption(加密解密) */,
+				4178DF7521F6B2D300B1BAAD /* DataPersistence(数据持久化) */,
 				4F4C0DDD2147883F00C6B1AF /* Pay */,
 				4F4C0D59214645B600C6B1AF /* CommonController */,
 				4F4C0CCF214635A600C6B1AF /* Animation */,
