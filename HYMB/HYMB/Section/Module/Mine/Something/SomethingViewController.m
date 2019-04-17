@@ -45,7 +45,7 @@
 #pragma mark - 构建视图
 - (void)setUI {
     
-    self.title = @"刷新加载样式";
+    self.title = @"刷新数据提示框";
     self.view.backgroundColor = [UIColor whiteColor];
     
     //添加tableView

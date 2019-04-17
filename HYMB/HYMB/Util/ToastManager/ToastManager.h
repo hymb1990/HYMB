@@ -15,15 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- 提示框（仿豆瓣）
- 
- @param view 展示到的页面
- @param tips 提示语
- */
-+ (void)showToastLikeDouBanInView:(UIView *)view
-                             tips:(NSString *)tips;
-
-/**
  提示框
  
  @param view 展示到的页面

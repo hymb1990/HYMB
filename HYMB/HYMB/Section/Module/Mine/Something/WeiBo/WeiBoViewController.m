@@ -9,8 +9,6 @@
 #import "WeiBoViewController.h"
 #import "RefreshModel.h"
 #import "RefreshCell.h"
-#import "DouBanGifHeader.h"
-#import "DouBanGifFooter.h"
 
 @interface WeiBoViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -31,16 +29,7 @@
     
     [self setUI];
     
-    //初始化header
-    self.tableHeaderView = [[UIView alloc] init];
-
-    self.headerL = [[UILabel alloc] init];
-    self.headerL.backgroundColor = [UIColor orangeColor];
-    self.headerL.textAlignment = NSTextAlignmentCenter;
-    self.headerL.text = @"热门微博已更新";
-    self.headerL.textColor = [UIColor whiteColor];
-    [self.view addSubview:self.headerL];
-    
+    [self initToast];
     
     self.dataArr = [NSMutableArray array];
     
@@ -62,10 +51,18 @@
 
 - (void)setRefreshHeaderAndFooter {
     
-    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
-    self.tableView.mj_header = [DouBanGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadMoreData方法）
-    self.tableView.mj_footer = [DouBanGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    __weak typeof(self)weakself = self;
+    //头
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakself loadNewData];
+    }];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    self.tableView.mj_header = header;
+    //脚
+    MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        [weakself loadMoreData];
+    }];
+    self.tableView.mj_footer = footer;
     
 }
 
@@ -95,35 +92,7 @@
                     self.pageNumber = self.pageNumber + 1;
                 }
                 
-                //提示框（仿微博）
-                //tableHeaderView站位用
-                self.tableHeaderView.frame = CGRectMake(kSCREEN_WIDTH/2, 0, 0, 30);
-                //headerL展示用
-                self.headerL.alpha = 0.0;
-                self.headerL.frame = CGRectMake(0, 0, kSCREEN_WIDTH, 30);
-                //出现
-                [UIView animateWithDuration:0.5 animations:^{
-                    //tableHeaderView站位用
-                    self.tableHeaderView.frame = CGRectMake(0, 0, kSCREEN_WIDTH, 30);
-                    self.tableView.tableHeaderView = self.tableHeaderView;
-                    //headerL展示用
-                    self.headerL.alpha = 0.7;
-                    self.headerL.frame = CGRectMake(0, 0, kSCREEN_WIDTH, 30);
-                }];
-                //消失
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    
-                    [UIView animateWithDuration:0.5 animations:^{
-                        //tableHeaderView站位用
-                        self.tableHeaderView.frame = CGRectMake(0, 0, kSCREEN_WIDTH, CGFLOAT_MIN);
-                        self.tableView.tableHeaderView = self.tableHeaderView;
-                        //headerL展示用
-                        self.headerL.frame = CGRectMake(0, 0, kSCREEN_WIDTH, 0);
-                    } completion:^(BOOL finished) {
-                        
-                    }];
-                    
-                });
+                [self showToastWithMes:@"热门微博已更新"];
                 
  
             } else {
@@ -169,7 +138,7 @@
 #pragma mark - 构建视图
 - (void)setUI {
     
-    self.title = @"动画刷新";
+    self.title = @"仿微博";
     self.view.backgroundColor = [UIColor whiteColor];
     
     //添加tableView
@@ -267,6 +236,52 @@
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     MYLog(@"%@", indexPath);
+}
+
+#pragma mark 提示框（仿微博）初始化
+- (void)initToast {
+    //初始化header
+    self.tableHeaderView = [[UIView alloc] init];
+    //提示框
+    self.headerL = [[UILabel alloc] init];
+    self.headerL.backgroundColor = [UIColor orangeColor];
+    self.headerL.textAlignment = NSTextAlignmentCenter;
+    self.headerL.textColor = [UIColor whiteColor];
+    [self.view addSubview:self.headerL];
+}
+
+#pragma mark 提示框（仿微博）展示
+- (void)showToastWithMes:(NSString *)mes {
+    
+    self.headerL.text = mes;
+    
+    //提示框（仿微博）
+    //tableHeaderView站位用
+    self.tableHeaderView.frame = CGRectMake(kSCREEN_WIDTH/2, 0, 0, 30);
+    //headerL展示用
+    self.headerL.alpha = 0.0;
+    self.headerL.frame = CGRectMake(0, 0, kSCREEN_WIDTH, 30);
+    //出现
+    [UIView animateWithDuration:0.5 animations:^{
+        //tableHeaderView站位用
+        self.tableHeaderView.frame = CGRectMake(0, 0, kSCREEN_WIDTH, 30);
+        self.tableView.tableHeaderView = self.tableHeaderView;
+        //headerL展示用
+        self.headerL.alpha = 0.7;
+        self.headerL.frame = CGRectMake(0, 0, kSCREEN_WIDTH, 30);
+    }];
+    //消失
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            //tableHeaderView站位用
+            self.tableHeaderView.frame = CGRectMake(0, 0, kSCREEN_WIDTH, CGFLOAT_MIN);
+            self.tableView.tableHeaderView = self.tableHeaderView;
+            //headerL展示用
+            self.headerL.frame = CGRectMake(0, 0, kSCREEN_WIDTH, 0);
+        }];
+        
+    });
 }
 
 @end

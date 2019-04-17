@@ -240,7 +240,7 @@
 		4FE7939421421CAA0070427C /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7939021421CAA0070427C /* CollectionViewController.m */; };
 		4FE7939521421CAA0070427C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7939321421CAA0070427C /* TableViewController.m */; };
 		4FE7939A21421D7B0070427C /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7939621421D7B0070427C /* RootTabBarController.m */; };
-		4FE7939B21421D7B0070427C /* HYMBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7939921421D7B0070427C /* HYMBNavigationController.m */; };
+		4FE7939B21421D7B0070427C /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7939921421D7B0070427C /* RootNavigationController.m */; };
 		4FE793A321421E7C0070427C /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE793A221421E7C0070427C /* MineVC.m */; };
 		4FE793D121426CE00070427C /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE793D021426CE00070427C /* Util.m */; };
 		4FE793DF21427CA30070427C /* RefreshCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE793DD21427CA30070427C /* RefreshCell.m */; };
@@ -661,8 +661,8 @@
 		4FE7939321421CAA0070427C /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		4FE7939621421D7B0070427C /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
 		4FE7939721421D7B0070427C /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
-		4FE7939821421D7B0070427C /* HYMBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYMBNavigationController.h; sourceTree = "<group>"; };
-		4FE7939921421D7B0070427C /* HYMBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYMBNavigationController.m; sourceTree = "<group>"; };
+		4FE7939821421D7B0070427C /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
+		4FE7939921421D7B0070427C /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 		4FE793A121421E7C0070427C /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
 		4FE793A221421E7C0070427C /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
 		4FE793A421421F850070427C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -730,6 +730,7 @@
 		0410405822647B7D0071C019 /* Something */ = {
 			isa = PBXGroup;
 			children = (
+				04104078226707500071C019 /* Other */,
 				0410406D2265C20B0071C019 /* WeiBo */,
 				04104063226585320071C019 /* DouBan */,
 				0410405922647BAC0071C019 /* SomethingViewController.h */,
@@ -761,6 +762,13 @@
 				041040702265C23D0071C019 /* WeiBoViewController.xib */,
 			);
 			path = WeiBo;
+			sourceTree = "<group>";
+		};
+		04104078226707500071C019 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		0476226E2255E168008F9C52 /* Swift */ = {
@@ -1812,8 +1820,8 @@
 		4FE7938C21421B920070427C /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				4FE7939821421D7B0070427C /* HYMBNavigationController.h */,
-				4FE7939921421D7B0070427C /* HYMBNavigationController.m */,
+				4FE7939821421D7B0070427C /* RootNavigationController.h */,
+				4FE7939921421D7B0070427C /* RootNavigationController.m */,
 				4FE7939721421D7B0070427C /* RootTabBarController.h */,
 				4FE7939621421D7B0070427C /* RootTabBarController.m */,
 			);
@@ -2153,6 +2161,7 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/BRPickerView/BRPickerView.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/FFToast/FFToast.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
@@ -2184,6 +2193,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BRPickerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFToast.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
@@ -2283,7 +2293,7 @@
 				4143F4E821F1CD2100062707 /* UIViewController+ZFPlayerRotation.m in Sources */,
 				4156C51B21F815D600C6E7F3 /* NSData+AES256.m in Sources */,
 				4F4C0D3F2146456500C6B1AF /* PGIndexBannerSubiew.m in Sources */,
-				4FE7939B21421D7B0070427C /* HYMBNavigationController.m in Sources */,
+				4FE7939B21421D7B0070427C /* RootNavigationController.m in Sources */,
 				4F4C0D3B2146456500C6B1AF /* LBXScanViewStyle.m in Sources */,
 				4F4C0D502146456500C6B1AF /* FYLCityPickView.m in Sources */,
 				4143F4EE21F1CD2100062707 /* ZFPlayerModel.m in Sources */,

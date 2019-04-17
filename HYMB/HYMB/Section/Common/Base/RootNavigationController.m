@@ -1,33 +1,43 @@
 //
-//  HYMBNavigationController.m
+//  RootNavigationController.m
 //  TracePlatform
 //
 //  Created by lym on 2017/5/3.
 //  Copyright © 2017年 ehsureTec. All rights reserved.
 //
 
-#import "HYMBNavigationController.h"
+#import "RootNavigationController.h"
 
-@interface HYMBNavigationController ()
+@interface RootNavigationController ()
 
 @end
 
-@implementation HYMBNavigationController
+@implementation RootNavigationController
 
 /**
  * 当第一次使用这个类的时候会调用一次
  */
 + (void)initialize
 {
-    //    // 当导航栏用在XMGNavigationController中, appearance设置才会生效
-    //    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
-    //    UINavigationBar *bar = [UINavigationBar appearance];
-    //
-    //    bar.barTintColor = NavColor;
-    //    这行代码可以关闭半透明效果，但是会导致坐标0点移动。
-    //    bar.translucent = NO;
-    //    关闭坐标0点移动
-    //    self.edgesForExtendedLayout = UIRectEdgeNone;
+    UINavigationBar *bar = [UINavigationBar appearance];
+    //修改状态栏字体颜色
+    bar.barStyle = UIStatusBarStyleDefault;
+    
+    NSMutableDictionary *atrr = [NSMutableDictionary dictionary];
+    atrr[NSForegroundColorAttributeName] = [UIColor whiteColor];
+    atrr[NSFontAttributeName] = [UIFont systemFontOfSize:20];
+    //顶部字体颜色和大小
+    [bar setTitleTextAttributes:atrr];
+    
+    //    //添加导航条背景图
+    //    [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav"]  forBarMetrics:UIBarMetricsDefault];
+    
+    //导航条颜色
+    [bar setBarTintColor:NaviColor];
+    [bar setShadowImage:[UIImage new]];
+    
+    //这行代码可以关闭半透明效果，但是会导致坐标0点移动。
+    bar.translucent = NO;
     
 }
 

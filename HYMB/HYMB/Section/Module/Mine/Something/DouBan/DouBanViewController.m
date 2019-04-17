@@ -18,6 +18,8 @@
 @property (nonatomic, assign) NSInteger pageNumber;//页码
 @property (nonatomic, strong) NSMutableArray *dataArr;//数据
 @property (nonatomic, strong) NoDataBackgroundView *noDataView;
+@property (nonatomic, strong) UILabel *headerL;
+
 @end
 
 @implementation DouBanViewController
@@ -27,6 +29,8 @@
     [super viewDidLoad];
     
     [self setUI];
+    
+    [self initToast];
     
     self.dataArr = [NSMutableArray array];
     
@@ -84,10 +88,9 @@
                     self.pageNumber = self.pageNumber + 1;
                 }
                 
-                //提示框（仿豆瓣）
-//                [ToastManager showToastInView:kKeyWindow tips:@"暂无新内容" tipsImageName:@"" postion:0 delay:2];
                 
-                [ToastManager showToastLikeDouBanInView:kKeyWindow tips:@"暂无新内容"];
+                [self showToastWithMes:@"已为您更新一组内容"];
+                
                 
             } else {
                 self.noDataView.hidden = NO;
@@ -132,7 +135,7 @@
 #pragma mark - 构建视图
 - (void)setUI {
     
-    self.title = @"动画刷新";
+    self.title = @"仿豆瓣";
     self.view.backgroundColor = [UIColor whiteColor];
     
     //添加tableView
@@ -230,6 +233,44 @@
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     MYLog(@"%@", indexPath);
+}
+
+#pragma mark 提示框（仿豆瓣）初始化
+- (void)initToast {
+    //提示框
+    self.headerL = [[UILabel alloc] init];
+    self.headerL.backgroundColor = ColorWithRGB(9, 173, 0);
+    self.headerL.textAlignment = NSTextAlignmentCenter;
+    self.headerL.layer.cornerRadius = 20;
+    self.headerL.layer.masksToBounds = YES;
+    self.headerL.textColor = [UIColor whiteColor];
+    [kKeyWindow addSubview:self.headerL];
+}
+
+#pragma mark 提示框（仿豆瓣）展示
+- (void)showToastWithMes:(NSString *)mes {
+    
+    self.headerL.text = mes;
+    
+    //headerL展示用
+    self.headerL.alpha = 0.0;
+    self.headerL.frame = CGRectMake(50, 20, kSCREEN_WIDTH-100, 40);
+    //出现
+    [UIView animateWithDuration:0.3 animations:^{
+        //headerL展示用
+        self.headerL.alpha = 1;
+        self.headerL.frame = CGRectMake(50, NaviH, kSCREEN_WIDTH-100, 40);
+    }];
+    //消失
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            //headerL展示用
+            self.headerL.alpha = 0.0;
+            self.headerL.frame = CGRectMake(50, 20, kSCREEN_WIDTH-100, 40);
+        }];
+        
+    });
 }
 
 @end

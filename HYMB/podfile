@@ -29,6 +29,7 @@ pod 'BRPickerView'
 pod 'ReactiveObjC'
 pod 'LLSegmentBar'
 pod 'YNPageViewController'
+pod 'FFToast'
 
 pod 'cocopodsDemo'
 

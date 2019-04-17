@@ -86,12 +86,13 @@
                 for (NSDictionary *dict in responseObject[@"data"][@"items"]) {
                     RefreshModel *model = [RefreshModel mj_objectWithKeyValues:dict];
                     [self.dataArr addObject:model];
+                    self.pageNumber = self.pageNumber + 1;
                 }
             } else {
                 self.noDataView.hidden = NO;
                 [self.tableView.mj_footer endRefreshingWithNoMoreData];
             }
-            self.pageNumber = 2;
+        
             [self.tableView reloadData];
         }else {
             self.loadingView.hidden = NO;
@@ -119,8 +120,9 @@
                 for (NSDictionary *dict in responseObject[@"data"][@"items"]) {
                     RefreshModel *model = [RefreshModel mj_objectWithKeyValues:dict];
                     [self.dataArr addObject:model];
+                    self.pageNumber = self.pageNumber + 1;
                 }
-                self.pageNumber = self.pageNumber + 1;
+                
                 [self.tableView reloadData];
             }else {
                 [self.tableView.mj_footer endRefreshingWithNoMoreData];
