@@ -10,6 +10,39 @@
 
 @implementation ToastManager
 
+/**
+ 提示框（仿豆瓣）
+ 
+ @param view 展示到的页面
+ @param tips 提示语
+ */
++ (void)showToastLikeDouBanInView:(UIView *)view
+                             tips:(NSString *)tips {
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.mode = MBProgressHUDModeCustomView;
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.bezelView.backgroundColor = ColorWithRGB(9, 173, 0);
+    hud.bezelView.alpha = 1;
+    hud.bezelView.layer.masksToBounds = YES;
+    hud.bezelView.layer.cornerRadius = 15;
+    hud.bezelView.height = 30;
+    [hud.bezelView setHeight:30];
+//    [hud setHeight:80];
+
+    hud.detailsLabel.text = tips;
+    hud.detailsLabel.backgroundColor = [UIColor redColor];
+    hud.detailsLabel.textColor = [UIColor whiteColor];
+    hud.detailsLabel.font = [UIFont systemFontOfSize:16];
+    
+
+    [hud setOffset:CGPointMake(0, -kScreen_Height/2+NaviH)];
+    [hud hideAnimated:YES afterDelay:2];
+    
+ 
+    
+}
+
 
 /**
  提示框

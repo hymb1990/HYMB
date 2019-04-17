@@ -22,7 +22,9 @@
 //metamacro_foreach(rac_strongify_,, __VA_ARGS__) \
 //_Pragma("clang diagnostic pop")
 
-/* 定义颜色-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* 定义常量------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 //导航条颜色
 #define NaviColor       ColorWithRGB(27, 114, 229)
 //tableView默认背景色
@@ -33,7 +35,9 @@
 //常用按钮蓝灰色（不可点击）
 #define BtnGrayColor        ColorWithRGB(178, 215, 238)
 
-/* 定义数值-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+// keyWindow
+#define kKeyWindow          [UIApplication sharedApplication].keyWindow
 //全屏高度
 #define kSCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
 //全屏宽度
@@ -135,15 +139,8 @@
 #define GZYPT_userrealname_logOut   @"/userrealname/logOut"//退出登录 GET
 
 
-
-
-
-
 //头条
 #define api_news_feed_v58   @"https://is.snssdk.com/api/news/feed/v58/"//视频数据 GET
-
-
-
 
 
 //礼物说

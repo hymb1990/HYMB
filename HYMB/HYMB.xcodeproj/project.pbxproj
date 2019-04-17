@@ -19,6 +19,14 @@
 		0410405022646CC80071C019 /* FingerprintIdentificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0410404E22646CC80071C019 /* FingerprintIdentificationVC.m */; };
 		0410405122646CC80071C019 /* FingerprintIdentificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0410404F22646CC80071C019 /* FingerprintIdentificationVC.xib */; };
 		04104057226478360071C019 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04104056226478360071C019 /* Image.xcassets */; };
+		0410405C22647BAC0071C019 /* SomethingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0410405A22647BAC0071C019 /* SomethingViewController.m */; };
+		0410405D22647BAC0071C019 /* SomethingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0410405B22647BAC0071C019 /* SomethingViewController.xib */; };
+		041040692265865D0071C019 /* DouBanGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 041040682265865D0071C019 /* DouBanGifFooter.m */; };
+		0410406C226586E60071C019 /* DouBanGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0410406B226586E60071C019 /* DouBanGifHeader.m */; };
+		041040712265C23D0071C019 /* WeiBoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0410406F2265C23D0071C019 /* WeiBoViewController.m */; };
+		041040722265C23D0071C019 /* WeiBoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041040702265C23D0071C019 /* WeiBoViewController.xib */; };
+		041040762265C2910071C019 /* DouBanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041040742265C2900071C019 /* DouBanViewController.xib */; };
+		041040772265C2910071C019 /* DouBanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041040752265C2910071C019 /* DouBanViewController.m */; };
 		047622722255E18D008F9C52 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047622702255E18D008F9C52 /* SwiftViewController.swift */; };
 		047622732255E18D008F9C52 /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047622712255E18D008F9C52 /* SwiftViewController.xib */; };
 		04A3B1A1224888AC00619D15 /* PropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3B19F224888AC00619D15 /* PropertyViewController.m */; };
@@ -277,6 +285,19 @@
 		0410404E22646CC80071C019 /* FingerprintIdentificationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FingerprintIdentificationVC.m; sourceTree = "<group>"; };
 		0410404F22646CC80071C019 /* FingerprintIdentificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FingerprintIdentificationVC.xib; sourceTree = "<group>"; };
 		04104056226478360071C019 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		0410405922647BAC0071C019 /* SomethingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SomethingViewController.h; sourceTree = "<group>"; };
+		0410405A22647BAC0071C019 /* SomethingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SomethingViewController.m; sourceTree = "<group>"; };
+		0410405B22647BAC0071C019 /* SomethingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SomethingViewController.xib; sourceTree = "<group>"; };
+		041040672265865D0071C019 /* DouBanGifFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DouBanGifFooter.h; sourceTree = "<group>"; };
+		041040682265865D0071C019 /* DouBanGifFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DouBanGifFooter.m; sourceTree = "<group>"; };
+		0410406A226586E60071C019 /* DouBanGifHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DouBanGifHeader.h; sourceTree = "<group>"; };
+		0410406B226586E60071C019 /* DouBanGifHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DouBanGifHeader.m; sourceTree = "<group>"; };
+		0410406E2265C23D0071C019 /* WeiBoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiBoViewController.h; sourceTree = "<group>"; };
+		0410406F2265C23D0071C019 /* WeiBoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiBoViewController.m; sourceTree = "<group>"; };
+		041040702265C23D0071C019 /* WeiBoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeiBoViewController.xib; sourceTree = "<group>"; };
+		041040732265C2900071C019 /* DouBanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DouBanViewController.h; sourceTree = "<group>"; };
+		041040742265C2900071C019 /* DouBanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DouBanViewController.xib; sourceTree = "<group>"; };
+		041040752265C2910071C019 /* DouBanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DouBanViewController.m; sourceTree = "<group>"; };
 		0476226F2255E18D008F9C52 /* HYMB-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HYMB-Bridging-Header.h"; sourceTree = "<group>"; };
 		047622702255E18D008F9C52 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		047622712255E18D008F9C52 /* SwiftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftViewController.xib; sourceTree = "<group>"; };
@@ -704,6 +725,42 @@
 				04103D7D225ED1E10071C019 /* HoverViewController.xib */,
 			);
 			path = SpecialEffects;
+			sourceTree = "<group>";
+		};
+		0410405822647B7D0071C019 /* Something */ = {
+			isa = PBXGroup;
+			children = (
+				0410406D2265C20B0071C019 /* WeiBo */,
+				04104063226585320071C019 /* DouBan */,
+				0410405922647BAC0071C019 /* SomethingViewController.h */,
+				0410405A22647BAC0071C019 /* SomethingViewController.m */,
+				0410405B22647BAC0071C019 /* SomethingViewController.xib */,
+			);
+			path = Something;
+			sourceTree = "<group>";
+		};
+		04104063226585320071C019 /* DouBan */ = {
+			isa = PBXGroup;
+			children = (
+				041040732265C2900071C019 /* DouBanViewController.h */,
+				041040752265C2910071C019 /* DouBanViewController.m */,
+				041040742265C2900071C019 /* DouBanViewController.xib */,
+				0410406A226586E60071C019 /* DouBanGifHeader.h */,
+				0410406B226586E60071C019 /* DouBanGifHeader.m */,
+				041040672265865D0071C019 /* DouBanGifFooter.h */,
+				041040682265865D0071C019 /* DouBanGifFooter.m */,
+			);
+			path = DouBan;
+			sourceTree = "<group>";
+		};
+		0410406D2265C20B0071C019 /* WeiBo */ = {
+			isa = PBXGroup;
+			children = (
+				0410406E2265C23D0071C019 /* WeiBoViewController.h */,
+				0410406F2265C23D0071C019 /* WeiBoViewController.m */,
+				041040702265C23D0071C019 /* WeiBoViewController.xib */,
+			);
+			path = WeiBo;
 			sourceTree = "<group>";
 		};
 		0476226E2255E168008F9C52 /* Swift */ = {
@@ -1811,6 +1868,7 @@
 		4FE793A021421E4A0070427C /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				0410405822647B7D0071C019 /* Something */,
 				4FE793A121421E7C0070427C /* MineVC.h */,
 				4FE793A221421E7C0070427C /* MineVC.m */,
 				04A3B19D2248888B00619D15 /* Property */,
@@ -1985,6 +2043,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4198A353222E4E5A00D8AE18 /* first.css in Resources */,
+				041040722265C23D0071C019 /* WeiBoViewController.xib in Resources */,
 				4F4C0E492147AE2A00C6B1AF /* GZYPT_51Test.cer in Resources */,
 				4F63F8A7215B504B00432B2B /* O.json in Resources */,
 				4F06E467219424BD007A7BE6 /* first.html in Resources */,
@@ -2003,6 +2062,7 @@
 				4198A351222E4E3A00D8AE18 /* second.css in Resources */,
 				4156C52621F8321200C6E7F3 /* DESViewController.xib in Resources */,
 				4156C54321F8374C00C6E7F3 /* public_key.der in Resources */,
+				041040762265C2910071C019 /* DouBanViewController.xib in Resources */,
 				4F63F89B215B504B00432B2B /* Comma.json in Resources */,
 				4F63F8B0215B504B00432B2B /* X.json in Resources */,
 				4189252921F02587007D00B2 /* FirstPageCell.xib in Resources */,
@@ -2018,6 +2078,7 @@
 				4F63F8A0215B504B00432B2B /* H.json in Resources */,
 				4F63F8AF215B504B00432B2B /* W.json in Resources */,
 				4F4C0E412147AE2A00C6B1AF /* GZYPT_96Test.cer in Resources */,
+				0410405D22647BAC0071C019 /* SomethingViewController.xib in Resources */,
 				4198A346222E2A3500D8AE18 /* LLSegmentBarViewController.xib in Resources */,
 				4F06E466219424BD007A7BE6 /* first.js in Resources */,
 				4F4C0D322146456500C6B1AF /* LTPickerView.xib in Resources */,
@@ -2212,6 +2273,7 @@
 				4F4C0D61214646A100C6B1AF /* SearchVC.m in Sources */,
 				4F4C0D522146456500C6B1AF /* YYClassInfo.m in Sources */,
 				41E71B2721EDB24F008C87CD /* NetworkManager.m in Sources */,
+				041040712265C23D0071C019 /* WeiBoViewController.m in Sources */,
 				4189252821F02587007D00B2 /* FirstPageCell.m in Sources */,
 				4FE793E32142824A0070427C /* RefreshModel.m in Sources */,
 				4F4C0D9921466B5E00C6B1AF /* DatePickerVC.m in Sources */,
@@ -2260,9 +2322,11 @@
 				4156C51F21F815FE00C6E7F3 /* AESViewController.m in Sources */,
 				4FE793DF21427CA30070427C /* RefreshCell.m in Sources */,
 				4F4C0D392146456500C6B1AF /* LBXScanView.m in Sources */,
+				0410405C22647BAC0071C019 /* SomethingViewController.m in Sources */,
 				4156C53221F833F800C6E7F3 /* MD5ViewController.m in Sources */,
 				04103D77225DF8B40071C019 /* HeadEnlargeVC.m in Sources */,
 				4F4C0D432146456500C6B1AF /* PYSearchConst.m in Sources */,
+				041040692265865D0071C019 /* DouBanGifFooter.m in Sources */,
 				4FE7935B214219980070427C /* main.m in Sources */,
 				04103D72225DF5E90071C019 /* SpecialEffectsVC.m in Sources */,
 				4F4C0D4A2146456500C6B1AF /* MyQRViewController.m in Sources */,
@@ -2312,6 +2376,7 @@
 				04103D82225F0DF60071C019 /* YNSuspendTopPauseBaseTableViewVC.m in Sources */,
 				4F4C0D512146456500C6B1AF /* NSObject+YYModel.m in Sources */,
 				4198A345222E2A3500D8AE18 /* LLSegmentBarViewController.m in Sources */,
+				0410406C226586E60071C019 /* DouBanGifHeader.m in Sources */,
 				4F4C0D352146456500C6B1AF /* LBXScanNative.m in Sources */,
 				4F4C0DA521466DBF00C6B1AF /* MHSelectPickerView.m in Sources */,
 				4178DFF221F716C300B1BAAD /* UserInfo+CoreDataProperties.m in Sources */,
@@ -2324,6 +2389,7 @@
 				4178DFD821F6FFE000B1BAAD /* HuaHua.xcdatamodeld in Sources */,
 				4F4C0D9521466A4A00C6B1AF /* PickerVC.m in Sources */,
 				4F4C0CC4214604AE00C6B1AF /* MJChiBaoZiHeader.m in Sources */,
+				041040772265C2910071C019 /* DouBanViewController.m in Sources */,
 				4156C51A21F815D600C6E7F3 /* NSString+AES256.m in Sources */,
 				4F63F8DB215BA71700432B2B /* FSCalendarVC.m in Sources */,
 				41FD70A721E300E0002DB391 /* NetworkParModel.m in Sources */,

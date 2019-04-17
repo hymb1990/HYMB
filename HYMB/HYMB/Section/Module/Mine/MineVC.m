@@ -9,6 +9,8 @@
 #import "MineVC.h"
 #import "MyAlertView.h"
 #import "PropertyViewController.h"
+#import "SomethingViewController.h"
+
 
 @interface MineVC ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -34,6 +36,10 @@
                      @{@"title":@"属性修饰符",
                        @"content":@[
                                @"Property",
+                               ]},
+                     @{@"title":@"其它",
+                       @"content":@[
+                               @"Something",
                                ]},
                      ];
 }
@@ -156,8 +162,10 @@
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    NSString *title = @"简书著作权归作者所有，任何形式的转载都请联系作者获得授权";
     
+    
+    
+    NSString *title = @"简书著作权归作者所有，任何形式的转载都请联系作者获得授权";
     NSString *message = @"接私活对程序员这个圈子来说是一个既公开又隐秘的事情，接私活对程序员这个圈子来说是一个既公开又隐秘的事情，接私活对程序员这个圈子来说是一个既公开又隐秘的事情，接私活对程序员这个圈子来说是一个既公开又隐秘的事情，接私活对程序员这个圈子来说是一个既公开又隐秘的事情，接私活对程序员这个圈子来说是一个既公开又隐秘的事情，接私活对程序员这个圈子来说是一个既公开又隐秘的事情，接私活对程序员这个圈子来说是一个既公开又隐秘的事情，接私活对程序员这个圈子来说是一个既公开又隐秘的事情，";
     
     
@@ -203,6 +211,12 @@
         [self.navigationController pushViewController:VC animated:YES];
     }
     
+    
+    if ([cell.textLabel.text isEqualToString:@"Something"]) {
+        
+        SomethingViewController *VC = [SomethingViewController new];
+        [self.navigationController pushViewController:VC animated:YES];
+    }
     
 }
 
