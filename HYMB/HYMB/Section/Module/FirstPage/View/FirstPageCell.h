@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstPageCell : UICollectionViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *titleL;
 
 @end

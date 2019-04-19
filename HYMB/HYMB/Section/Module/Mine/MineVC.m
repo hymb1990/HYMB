@@ -69,6 +69,9 @@
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
     self.tableView.backgroundColor = DefaultColor;
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    }
     [self.view addSubview:self.tableView];
     
 }

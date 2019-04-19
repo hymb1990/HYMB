@@ -166,14 +166,14 @@
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.itemSize = CGSizeMake(kScreen_Width, 100);
     flowLayout.minimumInteritemSpacing = 10;
-    flowLayout.minimumLineSpacing = 10;
+    flowLayout.minimumLineSpacing = 1;
     flowLayout.headerReferenceSize = CGSizeMake(kScreen_Width, 30);
     flowLayout.footerReferenceSize = CGSizeMake(kScreen_Width, CGFLOAT_MIN);
     
     //创建collectionView（并用布局类对象初始化集合视图）
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height-NaviH) collectionViewLayout:flowLayout];
     
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = DefaultColor;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     self.collectionView.showsHorizontalScrollIndicator = NO;
@@ -214,8 +214,7 @@
     NSString *CellIdentifier = [NSString stringWithFormat:@"cell%ld%ld",indexPath.section,indexPath.row];
     [self.collectionView registerNib:[UINib nibWithNibName:@"FirstPageCell" bundle:nil] forCellWithReuseIdentifier:CellIdentifier];
     FirstPageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    cell.backgroundColor = [UIColor whiteColor];
+
     cell.titleL.text = self.dataArr[indexPath.section][@"content"][indexPath.row];
     
     return cell;
