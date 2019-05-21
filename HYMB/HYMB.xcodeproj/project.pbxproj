@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040E596E22928E3200BCA15C /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E596C22928E3200BCA15C /* RunLoopViewController.m */; };
+		040E596F22928E3200BCA15C /* RunLoopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E596D22928E3200BCA15C /* RunLoopViewController.xib */; };
 		04103D72225DF5E90071C019 /* SpecialEffectsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04103D70225DF5E90071C019 /* SpecialEffectsVC.m */; };
 		04103D73225DF5E90071C019 /* SpecialEffectsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04103D71225DF5E90071C019 /* SpecialEffectsVC.xib */; };
 		04103D77225DF8B40071C019 /* HeadEnlargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04103D75225DF8B40071C019 /* HeadEnlargeVC.m */; };
@@ -31,6 +33,9 @@
 		047622732255E18D008F9C52 /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047622712255E18D008F9C52 /* SwiftViewController.xib */; };
 		04A3B1A1224888AC00619D15 /* PropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3B19F224888AC00619D15 /* PropertyViewController.m */; };
 		04A3B1A2224888AC00619D15 /* PropertyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A3B1A0224888AC00619D15 /* PropertyViewController.xib */; };
+		04C7DD82228D086600CA142E /* AlgorithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7DD80228D086600CA142E /* AlgorithmVC.m */; };
+		04C7DD83228D086600CA142E /* AlgorithmVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C7DD81228D086600CA142E /* AlgorithmVC.xib */; };
+		04FC52B8228E5C7A004F39A7 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC52B7228E5C79004F39A7 /* UncaughtExceptionHandler.m */; };
 		256717B1812ECE09F6055365 /* Pods_HYMB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD87D4EB24687AA13357FF2D /* Pods_HYMB.framework */; };
 		4143F4BF21F1C1E600062707 /* UIImage+EX.m in Sources */ = {isa = PBXBuildFile; fileRef = 4143F4BD21F1C1E600062707 /* UIImage+EX.m */; };
 		4143F4E121F1CD2100062707 /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4143F4C221F1CD2100062707 /* ASValuePopUpView.m */; };
@@ -267,6 +272,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040E596B22928E3200BCA15C /* RunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopViewController.h; sourceTree = "<group>"; };
+		040E596C22928E3200BCA15C /* RunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopViewController.m; sourceTree = "<group>"; };
+		040E596D22928E3200BCA15C /* RunLoopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunLoopViewController.xib; sourceTree = "<group>"; };
 		04103D6F225DF5E90071C019 /* SpecialEffectsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialEffectsVC.h; sourceTree = "<group>"; };
 		04103D70225DF5E90071C019 /* SpecialEffectsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialEffectsVC.m; sourceTree = "<group>"; };
 		04103D71225DF5E90071C019 /* SpecialEffectsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecialEffectsVC.xib; sourceTree = "<group>"; };
@@ -304,6 +312,11 @@
 		04A3B19E224888AC00619D15 /* PropertyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyViewController.h; sourceTree = "<group>"; };
 		04A3B19F224888AC00619D15 /* PropertyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyViewController.m; sourceTree = "<group>"; };
 		04A3B1A0224888AC00619D15 /* PropertyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropertyViewController.xib; sourceTree = "<group>"; };
+		04C7DD7F228D086600CA142E /* AlgorithmVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmVC.h; sourceTree = "<group>"; };
+		04C7DD80228D086600CA142E /* AlgorithmVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmVC.m; sourceTree = "<group>"; };
+		04C7DD81228D086600CA142E /* AlgorithmVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlgorithmVC.xib; sourceTree = "<group>"; };
+		04FC52B6228E5C79004F39A7 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		04FC52B7228E5C79004F39A7 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		2AB5145AC8720DF322556FD5 /* Pods-HYMB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYMB.release.xcconfig"; path = "Pods/Target Support Files/Pods-HYMB/Pods-HYMB.release.xcconfig"; sourceTree = "<group>"; };
 		4143F4BD21F1C1E600062707 /* UIImage+EX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EX.m"; sourceTree = "<group>"; };
 		4143F4BE21F1C1E600062707 /* UIImage+EX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EX.h"; sourceTree = "<group>"; };
@@ -706,6 +719,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040E596A22928E1900BCA15C /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				040E596B22928E3200BCA15C /* RunLoopViewController.h */,
+				040E596C22928E3200BCA15C /* RunLoopViewController.m */,
+				040E596D22928E3200BCA15C /* RunLoopViewController.xib */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
 		04103D6E225DF5B40071C019 /* SpecialEffects */ = {
 			isa = PBXGroup;
 			children = (
@@ -789,6 +812,25 @@
 				04A3B1A0224888AC00619D15 /* PropertyViewController.xib */,
 			);
 			path = Property;
+			sourceTree = "<group>";
+		};
+		04C7DD7E228D082C00CA142E /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				04C7DD7F228D086600CA142E /* AlgorithmVC.h */,
+				04C7DD80228D086600CA142E /* AlgorithmVC.m */,
+				04C7DD81228D086600CA142E /* AlgorithmVC.xib */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		04FC52B5228E5C79004F39A7 /* ExceptionHandler */ = {
+			isa = PBXGroup;
+			children = (
+				04FC52B6228E5C79004F39A7 /* UncaughtExceptionHandler.h */,
+				04FC52B7228E5C79004F39A7 /* UncaughtExceptionHandler.m */,
+			);
+			path = ExceptionHandler;
 			sourceTree = "<group>";
 		};
 		34EC230DDD27BA08A1CA5EF5 /* Frameworks */ = {
@@ -1801,6 +1843,7 @@
 		4FE7938821421B380070427C /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				04FC52B5228E5C79004F39A7 /* ExceptionHandler */,
 				4143F62B21F1DB5600062707 /* WMPageController */,
 				4143F4C021F1CD2100062707 /* ZFPlayer */,
 				4F4C0D9E21466DBF00C6B1AF /* MHDatePicker */,
@@ -1876,9 +1919,11 @@
 		4FE793A021421E4A0070427C /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				0410405822647B7D0071C019 /* Something */,
 				4FE793A121421E7C0070427C /* MineVC.h */,
 				4FE793A221421E7C0070427C /* MineVC.m */,
+				040E596A22928E1900BCA15C /* RunLoop */,
+				04C7DD7E228D082C00CA142E /* Algorithm */,
+				0410405822647B7D0071C019 /* Something */,
 				04A3B19D2248888B00619D15 /* Property */,
 				41AFBEE42229040100C0530E /* MyAlert */,
 			);
@@ -2104,6 +2149,7 @@
 				4F4C0D572146456500C6B1AF /* LICENSE in Resources */,
 				4F4C0DE92147895B00C6B1AF /* WeChatPayVC.xib in Resources */,
 				4F4C0D582146456500C6B1AF /* README.md in Resources */,
+				04C7DD83228D086600CA142E /* AlgorithmVC.xib in Resources */,
 				4FE79355214219980070427C /* Assets.xcassets in Resources */,
 				4F63F899215B504B00432B2B /* C.json in Resources */,
 				4F63F8A6215B504B00432B2B /* N.json in Resources */,
@@ -2123,6 +2169,7 @@
 				41AFBEF122294DFC00C0530E /* MyAlertView.xib in Resources */,
 				4F63F8A1215B504B00432B2B /* I.json in Resources */,
 				4156C52021F815FE00C6E7F3 /* AESViewController.xib in Resources */,
+				040E596F22928E3200BCA15C /* RunLoopViewController.xib in Resources */,
 				4F63F8A3215B504B00432B2B /* K.json in Resources */,
 				04104057226478360071C019 /* Image.xcassets in Resources */,
 				4F4C0D332146456500C6B1AF /* CodeScan.bundle in Resources */,
@@ -2252,6 +2299,7 @@
 			files = (
 				4178DF7D21F6C40200B1BAAD /* PreferenceVC.m in Sources */,
 				4F4C0D9221466A2C00C6B1AF /* CityPickerVC.m in Sources */,
+				040E596E22928E3200BCA15C /* RunLoopViewController.m in Sources */,
 				4F4C0D7321464C8500C6B1AF /* FirstChildVC.m in Sources */,
 				4F06E465219424BD007A7BE6 /* OC_JSVC.m in Sources */,
 				4F4C0DAE2146806400C6B1AF /* LoopViewController.m in Sources */,
@@ -2289,6 +2337,7 @@
 				4F4C0D9921466B5E00C6B1AF /* DatePickerVC.m in Sources */,
 				4F4C0D812146520C00C6B1AF /* YBPopVC.m in Sources */,
 				4F4C0D4B2146456500C6B1AF /* ScanHelper.m in Sources */,
+				04FC52B8228E5C7A004F39A7 /* UncaughtExceptionHandler.m in Sources */,
 				4143F4E221F1CD2100062707 /* ASValueTrackingSlider.m in Sources */,
 				4143F4E821F1CD2100062707 /* UIViewController+ZFPlayerRotation.m in Sources */,
 				4156C51B21F815D600C6E7F3 /* NSData+AES256.m in Sources */,
@@ -2317,6 +2366,7 @@
 				4F4C0DD5214761A400C6B1AF /* TYCyclePagerViewCell.m in Sources */,
 				4F4C0DDB2147629F00C6B1AF /* TYCyclePagerViewC.m in Sources */,
 				4F4C0D4C2146456500C6B1AF /* ScanQRViewController.m in Sources */,
+				04C7DD82228D086600CA142E /* AlgorithmVC.m in Sources */,
 				4F4C0E4F2147AEA600C6B1AF /* SSLVC.m in Sources */,
 				4F63F8BC215B55D200432B2B /* JsonAnimationPlayVC.m in Sources */,
 				0410405022646CC80071C019 /* FingerprintIdentificationVC.m in Sources */,

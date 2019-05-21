@@ -14,6 +14,163 @@
 
 @implementation Util
 
+#pragma mark 字符串 转Unicode
++ (NSString *)utf8ToUnicode:(NSString *)string{
+    
+    NSUInteger length = [string length];
+    NSMutableString *str = [NSMutableString stringWithCapacity:0];
+    for (int i = 0;i < length; i++){
+        NSMutableString *s = [NSMutableString stringWithCapacity:0];
+        unichar _char = [string characterAtIndex:i];
+        // 判断是否为英文和数字
+        if (_char <= '9' && _char >='0'){
+            [s appendFormat:@"%@",[string substringWithRange:NSMakeRange(i,1)]];
+        }else if(_char >='a' && _char <= 'z'){
+            [s appendFormat:@"%@",[string substringWithRange:NSMakeRange(i,1)]];
+        }else if(_char >='A' && _char <= 'Z')
+        {
+            [s appendFormat:@"%@",[string substringWithRange:NSMakeRange(i,1)]];
+        }else{
+            // 中文和字符
+            [s appendFormat:@"\\u%x", [string characterAtIndex:i]];
+            // 不足位数补0 否则解码不成功
+            if(s.length == 4) {
+                [s insertString:@"00" atIndex:2];
+            } else if (s.length == 5) {
+                [s insertString:@"0" atIndex:2];
+            }
+        }
+        [str appendFormat:@"%@", s];
+    }
+    return str;
+    
+    
+}
+
+
+#pragma mark Unicode 转字符串
++ (NSString *)replaceUnicode:(NSString *)unicodeStr
+{
+    NSString *tempStr1 = [unicodeStr stringByReplacingOccurrencesOfString:@"\\u"withString:@"\\U"];
+    NSString *tempStr2 = [tempStr1 stringByReplacingOccurrencesOfString:@"'"withString:@"\""];
+    NSString *tempStr3 = [[@"'" stringByAppendingString:tempStr2] stringByAppendingString:@"'"];
+    
+    NSData *tempData = [tempStr3 dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSString *returnStr = [NSPropertyListSerialization propertyListFromData:tempData
+                                                           mutabilityOption:NSPropertyListImmutable
+                                                                     format:NULL
+                                                           errorDescription:NULL];
+    
+    return [returnStr stringByReplacingOccurrencesOfString:@"\r\n"withString:@"\n"];
+}
+
+
+#pragma mark 对一个字符串进行base64编码，并返回
++ (NSString *)base64EncodeString:(NSString *)string {
+    //1、先转换成二进制数据
+    NSData *data =[string dataUsingEncoding:NSUTF8StringEncoding];
+    //2、对二进制数据进行base64编码，完成后返回字符串
+    return [data base64EncodedStringWithOptions:0];
+}
+
+#pragma mark 对一个字符串进行base64解码，并返回
++ (NSString *)base64DecodeString:(NSString *)string {
+    //注意：该字符串是base64编码后的字符串
+    //1、转换为二进制数据（完成了解码的过程）
+    NSData *data=[[NSData alloc]initWithBase64EncodedString:string options:0];
+    //2、把二进制数据转换成字符串
+    return [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+}
+
+#pragma mark 字典转json字符串
++ (NSString *)dictToJSONString:(NSDictionary *)dict {
+    
+    NSError *error;
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+    
+    NSString *jsonString;
+    
+    if (!jsonData) {
+        
+        MYLog(@"%@",error);
+        
+    }else{
+        
+        jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+        
+    }
+    
+    NSMutableString *mutStr = [NSMutableString stringWithString:jsonString];
+    
+    NSRange range = {0,jsonString.length};
+    
+    //去掉字符串中的空格
+    
+    [mutStr replaceOccurrencesOfString:@" " withString:@"" options:NSLiteralSearch range:range];
+    
+    NSRange range2 = {0,mutStr.length};
+    
+    //去掉字符串中的换行符
+    
+    [mutStr replaceOccurrencesOfString:@"\n" withString:@"" options:NSLiteralSearch range:range2];
+    
+    return mutStr;
+    
+}
+
+#pragma mark json字符串转字典
++ (NSDictionary *)dictWithJsonString:(NSString *)jsonString {
+    
+    if (jsonString == nil) {
+        return nil;
+    }
+    
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    if(err)
+    {
+        MYLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
+}
+
+
+#pragma mark json字符串转数组
++ (NSArray *)getArrayWithJsonString:(NSString *)jsonString{
+    NSData *jsonData = [jsonString dataUsingEncoding:NSASCIIStringEncoding];
+    NSError *error = nil;
+    id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                    options:NSJSONReadingAllowFragments
+                                                      error:&error];
+    if (jsonObject != nil && error == nil){
+        return jsonObject;
+    }else{
+        // 解析错误
+        return nil;
+    }
+}
+
+#pragma mark 数组转json字符串
++ (NSString *)getJsonStringWithArray:(NSArray *)array{
+    if (array.count > 0) {
+        NSData *data = [NSJSONSerialization dataWithJSONObject:array options:NSJSONWritingPrettyPrinted error:nil];
+        NSString *jsonStr = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        jsonStr = [jsonStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]; //去除掉首尾的空白字符和换行字符
+        jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+        jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+        jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@" " withString:@""];
+        return jsonStr;
+        
+    }
+    return @"";
+}
+
 
 /**
  获取当前屏幕显示的viewcontroller

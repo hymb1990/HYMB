@@ -13,6 +13,35 @@
 
 #pragma mark - 其它
 
+
+#pragma mark 字符串 转Unicode
++ (NSString *)utf8ToUnicode:(NSString *)string;
+
+#pragma mark Unicode 转字符串
++ (NSString *)replaceUnicode:(NSString *)unicodeStr;
+
+#pragma mark 对一个字符串进行base64编码，并返回
++ (NSString *)base64EncodeString:(NSString *)string;
+
+#pragma mark 对一个字符串进行base64解码，并返回
++ (NSString *)base64DecodeString:(NSString *)string;
+
+
+#pragma mark 字典转json字符串
++ (NSString *)dictToJSONString:(NSDictionary *)dict;
+
+#pragma mark json字符串转字典
++ (NSDictionary *)dictWithJsonString:(NSString *)jsonString;
+
+#pragma mark 数组转json字符串
++ (NSString *)getJsonStringWithArray:(NSArray *)array;
+
+#pragma mark json字符串转数组
++ (NSArray *)getArrayWithJsonString:(NSString *)jsonString;
+
+
+
+
 + (UIViewController *)getCurrentVC;
 
 //创建提示弹框
@@ -108,6 +137,10 @@
 + (BOOL)isUserNameWithStr:(NSString *)content;
 //是否包含特殊字符
 + (BOOL)isHaveSpecialCharWithStr:(NSString *)content;
+
+
+
+
 
 
 @end

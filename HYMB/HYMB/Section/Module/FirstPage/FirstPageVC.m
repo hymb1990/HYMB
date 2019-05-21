@@ -64,6 +64,7 @@
                                     @"webView",
                                     @"OCJS",
                                     @"指纹识别",
+                                    @"test",
                                     ]},
                      
                      @{@"title":@"常用控件",
@@ -137,8 +138,6 @@
                      
                      ];
     
-    
-
     
 }
 
@@ -361,6 +360,7 @@
     if ([cell.titleL.text isEqualToString:@"OCJS"]) {
         OC_JSVC *VC = [OC_JSVC new];
         [self.navigationController pushViewController:VC animated:YES];
+//        HYBJsObjCModel *model = [HYBJsObjCModel new];
     }
     
     if ([cell.titleL.text isEqualToString:@"Swift"]) {
@@ -376,6 +376,10 @@
     if ([cell.titleL.text isEqualToString:@"指纹识别"]) {
         FingerprintIdentificationVC *VC = [FingerprintIdentificationVC new];
         [self.navigationController pushViewController:VC animated:YES];
+    }
+    
+    if ([cell.titleL.text isEqualToString:@"test"]) {
+        [self test];
     }
     
     
@@ -410,6 +414,18 @@
         return view;
     }
     
+}
+
+- (void)test {
+    [self exceptionHandlerTest1];
+}
+
+///异常处理测试1
+-(void)exceptionHandlerTest1{
+    //1、ios崩溃【数组越界】
+    NSArray *array= @[@"tom",@"xxx",@"ooo"];
+    [array objectAtIndex:5];
+
 }
 
 @end

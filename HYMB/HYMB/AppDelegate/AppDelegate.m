@@ -27,6 +27,9 @@
     self.rootTBC = [RootTabBarController new];
     self.window.rootViewController = self.rootTBC;
     
+#pragma mark - 捕获异常
+    [UncaughtExceptionHandler installUncaughtExceptionHandler:YES showAlert:YES];
+    
     return YES;
 }
 

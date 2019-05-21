@@ -10,7 +10,8 @@
 #import "MyAlertView.h"
 #import "PropertyViewController.h"
 #import "SomethingViewController.h"
-
+#import "AlgorithmVC.h"
+#import "RunLoopViewController.h"
 
 @interface MineVC ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -40,6 +41,8 @@
                      @{@"title":@"其它",
                        @"content":@[
                                @"Something",
+                               @"算法",
+                               @"RunLoop",
                                ]},
                      ];
 }
@@ -220,6 +223,20 @@
         SomethingViewController *VC = [SomethingViewController new];
         [self.navigationController pushViewController:VC animated:YES];
     }
+    
+    if ([cell.textLabel.text isEqualToString:@"算法"]) {
+        
+        AlgorithmVC *VC = [AlgorithmVC new];
+        [self.navigationController pushViewController:VC animated:YES];
+    }
+    
+    if ([cell.textLabel.text isEqualToString:@"RunLoop"]) {
+        
+        RunLoopViewController *VC = [RunLoopViewController new];
+        [self.navigationController pushViewController:VC animated:YES];
+    }
+    
+    
     
 }
 
