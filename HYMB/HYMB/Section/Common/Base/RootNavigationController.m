@@ -17,8 +17,8 @@
 /**
  * 当第一次使用这个类的时候会调用一次
  */
-+ (void)initialize
-{
++ (void)initialize {
+    
     UINavigationBar *bar = [UINavigationBar appearance];
     //修改状态栏字体颜色
     bar.barStyle = UIStatusBarStyleDefault;
@@ -43,6 +43,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [self setStatusBarBackgroundColor:[UIColor blackColor]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,6 +86,18 @@
 
 - (void)back {
     [self popViewControllerAnimated:YES];
+}
+
+/**
+ 设置状态栏背景颜色
+ 
+ @param color 设置颜色
+ */
+- (void)setStatusBarBackgroundColor:(UIColor *)color {
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+        statusBar.backgroundColor = color;
+    }
 }
 
 @end
