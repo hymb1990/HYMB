@@ -12,6 +12,7 @@
 #import "SomethingViewController.h"
 #import "AlgorithmVC.h"
 #import "RunLoopViewController.h"
+#import "InteractiveViewController.h"
 
 @interface MineVC ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -43,6 +44,7 @@
                                @"Something",
                                @"算法",
                                @"RunLoop",
+                               @"交互",
                                ]},
                      ];
 }
@@ -236,6 +238,11 @@
         [self.navigationController pushViewController:VC animated:YES];
     }
     
+    if ([cell.textLabel.text isEqualToString:@"交互"]) {
+        
+        InteractiveViewController *VC = [InteractiveViewController new];
+        [self.navigationController pushViewController:VC animated:YES];
+    }
     
     
 }

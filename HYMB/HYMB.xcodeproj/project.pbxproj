@@ -33,6 +33,10 @@
 		047622732255E18D008F9C52 /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047622712255E18D008F9C52 /* SwiftViewController.xib */; };
 		04A3B1A1224888AC00619D15 /* PropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3B19F224888AC00619D15 /* PropertyViewController.m */; };
 		04A3B1A2224888AC00619D15 /* PropertyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A3B1A0224888AC00619D15 /* PropertyViewController.xib */; };
+		04AE92CB22A61035003ABAC3 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE92C922A61035003ABAC3 /* InteractiveViewController.m */; };
+		04AE92CC22A61035003ABAC3 /* InteractiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AE92CA22A61035003ABAC3 /* InteractiveViewController.xib */; };
+		04AE92D022A65678003ABAC3 /* QwerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE92CE22A65678003ABAC3 /* QwerViewController.m */; };
+		04AE92D122A65678003ABAC3 /* QwerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AE92CF22A65678003ABAC3 /* QwerViewController.xib */; };
 		04C7DD82228D086600CA142E /* AlgorithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7DD80228D086600CA142E /* AlgorithmVC.m */; };
 		04C7DD83228D086600CA142E /* AlgorithmVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C7DD81228D086600CA142E /* AlgorithmVC.xib */; };
 		04FC52B8228E5C7A004F39A7 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC52B7228E5C79004F39A7 /* UncaughtExceptionHandler.m */; };
@@ -312,6 +316,12 @@
 		04A3B19E224888AC00619D15 /* PropertyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyViewController.h; sourceTree = "<group>"; };
 		04A3B19F224888AC00619D15 /* PropertyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyViewController.m; sourceTree = "<group>"; };
 		04A3B1A0224888AC00619D15 /* PropertyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropertyViewController.xib; sourceTree = "<group>"; };
+		04AE92C822A61035003ABAC3 /* InteractiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
+		04AE92C922A61035003ABAC3 /* InteractiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
+		04AE92CA22A61035003ABAC3 /* InteractiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InteractiveViewController.xib; sourceTree = "<group>"; };
+		04AE92CD22A65678003ABAC3 /* QwerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QwerViewController.h; sourceTree = "<group>"; };
+		04AE92CE22A65678003ABAC3 /* QwerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QwerViewController.m; sourceTree = "<group>"; };
+		04AE92CF22A65678003ABAC3 /* QwerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QwerViewController.xib; sourceTree = "<group>"; };
 		04C7DD7F228D086600CA142E /* AlgorithmVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmVC.h; sourceTree = "<group>"; };
 		04C7DD80228D086600CA142E /* AlgorithmVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmVC.m; sourceTree = "<group>"; };
 		04C7DD81228D086600CA142E /* AlgorithmVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlgorithmVC.xib; sourceTree = "<group>"; };
@@ -812,6 +822,19 @@
 				04A3B1A0224888AC00619D15 /* PropertyViewController.xib */,
 			);
 			path = Property;
+			sourceTree = "<group>";
+		};
+		04AE92C722A61013003ABAC3 /* Interactive */ = {
+			isa = PBXGroup;
+			children = (
+				04AE92C822A61035003ABAC3 /* InteractiveViewController.h */,
+				04AE92C922A61035003ABAC3 /* InteractiveViewController.m */,
+				04AE92CA22A61035003ABAC3 /* InteractiveViewController.xib */,
+				04AE92CD22A65678003ABAC3 /* QwerViewController.h */,
+				04AE92CE22A65678003ABAC3 /* QwerViewController.m */,
+				04AE92CF22A65678003ABAC3 /* QwerViewController.xib */,
+			);
+			path = Interactive;
 			sourceTree = "<group>";
 		};
 		04C7DD7E228D082C00CA142E /* Algorithm */ = {
@@ -1921,6 +1944,7 @@
 			children = (
 				4FE793A121421E7C0070427C /* MineVC.h */,
 				4FE793A221421E7C0070427C /* MineVC.m */,
+				04AE92C722A61013003ABAC3 /* Interactive */,
 				040E596A22928E1900BCA15C /* RunLoop */,
 				04C7DD7E228D082C00CA142E /* Algorithm */,
 				0410405822647B7D0071C019 /* Something */,
@@ -2122,6 +2146,7 @@
 				4FE79358214219980070427C /* LaunchScreen.storyboard in Resources */,
 				4F63F8A4215B504B00432B2B /* L.json in Resources */,
 				4FE793E021427CA30070427C /* RefreshCell.xib in Resources */,
+				04AE92CC22A61035003ABAC3 /* InteractiveViewController.xib in Resources */,
 				4F63F8A9215B504B00432B2B /* Q.json in Resources */,
 				4198A350222E4E3A00D8AE18 /* second.js in Resources */,
 				4156C53C21F8350D00C6E7F3 /* RSAViewController.xib in Resources */,
@@ -2159,6 +2184,7 @@
 				4F63F898215B504B00432B2B /* BlinkingCursor.json in Resources */,
 				4F4C0DA621466DBF00C6B1AF /* MHSelectPickerView.xib in Resources */,
 				4FE79350214219970070427C /* Main.storyboard in Resources */,
+				04AE92D122A65678003ABAC3 /* QwerViewController.xib in Resources */,
 				4F4C0E502147AEA600C6B1AF /* SSLVC.xib in Resources */,
 				4F61DDE421AD542D00766516 /* YBImageBrowserCell.xib in Resources */,
 				4F4C0E452147AE2A00C6B1AF /* GZYPT_51.cer in Resources */,
@@ -2380,6 +2406,7 @@
 				4156C52521F8321200C6E7F3 /* DESViewController.m in Sources */,
 				4189252721F02587007D00B2 /* FirstPageVC.m in Sources */,
 				4156C51F21F815FE00C6E7F3 /* AESViewController.m in Sources */,
+				04AE92CB22A61035003ABAC3 /* InteractiveViewController.m in Sources */,
 				4FE793DF21427CA30070427C /* RefreshCell.m in Sources */,
 				4F4C0D392146456500C6B1AF /* LBXScanView.m in Sources */,
 				0410405C22647BAC0071C019 /* SomethingViewController.m in Sources */,
@@ -2422,6 +2449,7 @@
 				4F4C0D4D2146456500C6B1AF /* YBPopupMenu.m in Sources */,
 				4156C52C21F8325500C6E7F3 /* DES.m in Sources */,
 				4F4C0DB22146815400C6B1AF /* PageFlowViewC.m in Sources */,
+				04AE92D022A65678003ABAC3 /* QwerViewController.m in Sources */,
 				4F4C0D482146456500C6B1AF /* SJSwitchCell.m in Sources */,
 				4143F4E521F1CD2100062707 /* UINavigationController+ZFPlayerRotation.m in Sources */,
 				4143F4E721F1CD2100062707 /* UIView+CustomControlView.m in Sources */,

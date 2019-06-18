@@ -22,6 +22,14 @@
 //metamacro_foreach(rac_strongify_,, __VA_ARGS__) \
 //_Pragma("clang diagnostic pop")
 
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define NSLog(...)
+#define debugMethod()
+#endif
+
 
 
 /* 定义常量------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
