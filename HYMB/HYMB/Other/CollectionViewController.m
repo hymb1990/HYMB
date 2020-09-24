@@ -36,25 +36,8 @@
     
     self.title = @"";
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    //创建集合视图布局类
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(150, 100);
-    flowLayout.minimumInteritemSpacing = 10;
-    flowLayout.minimumLineSpacing = 10;
-    flowLayout.headerReferenceSize = CGSizeMake(kScreen_Width, CGFLOAT_MIN);
-    flowLayout.footerReferenceSize = CGSizeMake(kScreen_Width, 10);
-    
-    //创建collectionView（并用布局类对象初始化集合视图）
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height) collectionViewLayout:flowLayout];
-    self.collectionView.backgroundColor = DefaultColor;
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
-    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerId"];
-    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footerId"];
+    //添加collectionView
     [self.view addSubview:self.collectionView];
-    
 }
 
 
@@ -121,6 +104,29 @@
         return view;
     }
 
+}
+
+
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+       //创建集合视图布局类
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.itemSize = CGSizeMake(150, 100);
+        flowLayout.minimumInteritemSpacing = 10;
+        flowLayout.minimumLineSpacing = 10;
+        flowLayout.headerReferenceSize = CGSizeMake(kScreen_Width, CGFLOAT_MIN);
+        flowLayout.footerReferenceSize = CGSizeMake(kScreen_Width, 10);
+    
+        //创建collectionView（并用布局类对象初始化集合视图）
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height) collectionViewLayout:flowLayout];
+        _collectionView.backgroundColor = DefaultColor;
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
+        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerId"];
+        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footerId"];
+    }
+    return _collectionView;
 }
 
 @end
