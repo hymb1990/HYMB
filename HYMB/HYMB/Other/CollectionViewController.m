@@ -106,7 +106,7 @@
 
 }
 
-
+#pragma mark - 懒加载
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
        //创建集合视图布局类
