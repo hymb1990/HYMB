@@ -36,15 +36,8 @@
     
     self.title = @"";
     self.view.backgroundColor = [UIColor whiteColor];
-    
     //添加tableView
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height) style:UITableViewStyleGrouped];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
-    self.tableView.backgroundColor = DefaultColor;
     [self.view addSubview:self.tableView];
-    
 }
 
 #pragma mark - tableView代理方法
@@ -132,6 +125,19 @@
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     MYLog(@"%@", indexPath);
+}
+
+- (UITableView *)tableView {
+    
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, kScreen_Height) style:UITableViewStyleGrouped];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
+        _tableView.backgroundColor = DefaultColor;
+    }
+    
+    return _tableView
 }
 
 @end
